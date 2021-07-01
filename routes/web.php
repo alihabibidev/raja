@@ -16,3 +16,32 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('login', function () {
+    return view('login');
+})->name('login');
+
+
+Route::get('hash/{name}', function ($name) {
+    return bcrypt($name);
+});
+
+Route::post('validateLogin', [\App\Http\Controllers\UserController::class, 'authenticate'])->name('validateLogin');
+
+
+
+
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+    Route::get('addUser', function () {
+        return view('addUser');
+    })->name('addUser');
+    Route::get('addBrand', function () {
+        return view('addBrand');
+    })->name('addUser');
+    Route::post('addUserValidate', [\App\Http\Controllers\UserController::class, 'addUser'])->name('addUserValidate');
+    Route::post('addBrandValidate', [\App\Http\Controllers\BrandController::class, 'addBrand'])->name('addBrandValidate');
+});
