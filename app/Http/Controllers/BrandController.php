@@ -17,17 +17,9 @@ class BrandController extends Controller
             return 'no';
         }
     }
-<<<<<<< HEAD
     public function getAllBrand(){
         return Brand::all();
     }
-=======
 
 
-    public function getAllBrand()
-    {
-       return Brand::all();
-    }
-
->>>>>>> 505452f9056f70a9f4f1486242ad270a430a8a7d
 }
