@@ -9,13 +9,17 @@
 </head>
 <body>
 <form action="">
-    @foreach($brands as $brand)
-        {{}}
-    @endforeach
+
     <input type="text" name="train_model" placeholder="مدل قطار">
     <input type="text" name="production_date" placeholder="سال ساخت">
     <select name="brand_id" id="">
-
+        @php
+           $brands = new \App\Http\Controllers\BrandController();
+           $brands_view = $brands->getAllBrand();
+        @endphp
+        @foreach($brands_view as $brand)
+            {{$brand}}
+        @endforeach
         <option value="fadak"></option>
         <button type="submit">
             ارسال
