@@ -13,7 +13,7 @@ class TripController extends Controller
     {
         $trains = Train::all();
         $trains = Train::with(['brand'])->get();
-        return view('addTrips', ['trains' => $trains]);
+        return view('admin.addTrip', ['trains' => $trains]);
     }
 
     public function addTrip(Request $request)

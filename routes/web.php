@@ -32,16 +32,16 @@ Route::post('validateLogin', [\App\Http\Controllers\UserController::class, 'auth
 Route::middleware(['auth'])->group(function () {
 
     Route::get('dashboard', function () {
-        return view('dashboard');
+        return view('admin.dashboard');
     })->name('dashboard');
 
     Route::get('addUser', function () {
-        return view('addUser');
+        return view('admin.addUser');
     })->name('addUser');
 
     Route::get('addBrand', function () {
-        return view('addBrand');
-    })->name('addUser');
+        return view('admin.addBrand');
+    })->name('addBrand');
 
 
 

@@ -10,9 +10,9 @@ use Illuminate\Http\Request;
 class TrainController extends Controller
 {
     public function addTrainPage(){
-//        $brands = Brand::all();
-        $brands = app('App\Http\Controllers\BrandController')->getAllBrand();
-        return view('addTrain' , ['brands' => $brands, 'dffff' => "4324425"]);
+        $brands = Brand::all();
+//        $brands = app('App\Http\Controllers\BrandController')->getAllBrand();
+        return view('admin.addTrain' , ['brands' => $brands]);
     }
     public  function addTrain(Request $request){
         $train = Train::create($request->all());
