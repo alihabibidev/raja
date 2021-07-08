@@ -29,9 +29,6 @@ Route::get('hash/{name}', function ($name) {
 Route::post('validateLogin', [\App\Http\Controllers\UserController::class, 'authenticate'])->name('validateLogin');
 
 
-
-
-
 Route::middleware(['auth'])->group(function () {
 
     Route::get('dashboard', function () {
@@ -45,9 +42,15 @@ Route::middleware(['auth'])->group(function () {
     Route::get('addBrand', function () {
         return view('addBrand');
     })->name('addUser');
-    Route::get('addTrain', function () {
-        return view('addTrain');
-    })->name('addTrain');
+
+
+
+    Route::get('addTrain', [\App\Http\Controllers\TrainController::class, 'addTrainPage'])->name('addTrainPage');
+    Route::post('addTrain', [\App\Http\Controllers\TrainController::class, 'addTrain'])->name('addTrain');
+
+    Route::get('addTrip', [\App\Http\Controllers\TripController::class, 'addTripPage'])->name('addTripPage');
+    Route::post('addTrip', [\App\Http\Controllers\TripController::class, 'addTrip'])->name('addTrip');
+
     Route::post('addUserValidate', [\App\Http\Controllers\UserController::class, 'addUser'])->name('addUserValidate');
     Route::post('addBrandValidate', [\App\Http\Controllers\BrandController::class, 'addBrand'])->name('addBrandValidate');
 });

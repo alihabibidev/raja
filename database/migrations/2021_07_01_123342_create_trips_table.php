@@ -19,7 +19,8 @@ class CreateTripsTable extends Migration
             $table->string('provider');
             $table->string('type');
             $table->string('Origin');
-            $table->string('Destination');
+            $table->integer('price');
+            $table->integer('off_price');
             $table->softDeletes($column = 'deleted_at', $precision = 0);
             $table->timestamp('time')->nullable();
         });

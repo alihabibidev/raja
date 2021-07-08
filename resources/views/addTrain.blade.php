@@ -8,19 +8,20 @@
     <title>Document</title>
 </head>
 <body>
-<form action="">
-    @foreach($brands as $brand)
-        {{}}
-    @endforeach
+<form action={{route("addTrain")}} method="post">
+    @csrf
     <input type="text" name="train_model" placeholder="مدل قطار">
     <input type="text" name="production_date" placeholder="سال ساخت">
-    <select name="brand_id" id="">
 
-        <option value="fadak"></option>
+    <select name="brand_id" id="">
+        @foreach($brands as $brand)
+            <option value={{$brand->id}}>{{ $brand->train_model }}</option>
+        @endforeach
+    </select>
+
         <button type="submit">
             ارسال
         </button>
-    </select>
 </form>
 </body>
 </html>

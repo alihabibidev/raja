@@ -12,8 +12,8 @@ class Brand extends Model
         'brand_name',
 
     ];
-    public function getBrand()
+    public function trains()
     {
-
+        return $this->hasMany(Train::class);
     }
 }

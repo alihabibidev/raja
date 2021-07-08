@@ -17,4 +17,7 @@ class BrandController extends Controller
             return 'no';
         }
     }
+    public function getAllBrand(){
+        return Brand::all();
+    }
 }
