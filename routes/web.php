@@ -33,15 +33,21 @@ Route::post('validateLogin', [\App\Http\Controllers\UserController::class, 'auth
 
 
 Route::middleware(['auth'])->group(function () {
+
     Route::get('dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
     Route::get('addUser', function () {
         return view('addUser');
     })->name('addUser');
+
     Route::get('addBrand', function () {
         return view('addBrand');
     })->name('addUser');
+    Route::get('addTrain', function () {
+        return view('addTrain');
+    })->name('addTrain');
     Route::post('addUserValidate', [\App\Http\Controllers\UserController::class, 'addUser'])->name('addUserValidate');
     Route::post('addBrandValidate', [\App\Http\Controllers\BrandController::class, 'addBrand'])->name('addBrandValidate');
 });
