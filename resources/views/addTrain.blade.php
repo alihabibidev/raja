@@ -8,17 +8,33 @@
     <title>Document</title>
 </head>
 <body>
+<<<<<<< HEAD
 <form action={{route("addTrain")}} method="post">
     @csrf
+=======
+<form action="">
+
+>>>>>>> 505452f9056f70a9f4f1486242ad270a430a8a7d
     <input type="text" name="train_model" placeholder="مدل قطار">
     <input type="text" name="production_date" placeholder="سال ساخت">
 
     <select name="brand_id" id="">
+<<<<<<< HEAD
         @foreach($brands as $brand)
             <option value={{$brand->id}}>{{ $brand->train_model }}</option>
         @endforeach
     </select>
 
+=======
+        @php
+           $brands = new \App\Http\Controllers\BrandController();
+           $brands_view = $brands->getAllBrand();
+        @endphp
+        @foreach($brands_view as $brand)
+            {{$brand}}
+        @endforeach
+        <option value="fadak"></option>
+>>>>>>> 505452f9056f70a9f4f1486242ad270a430a8a7d
         <button type="submit">
             ارسال
         </button>

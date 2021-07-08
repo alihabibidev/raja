@@ -43,6 +43,7 @@ Route::middleware(['auth'])->group(function () {
         return view('addBrand');
     })->name('addUser');
 
+<<<<<<< HEAD
 
 
     Route::get('addTrain', [\App\Http\Controllers\TrainController::class, 'addTrainPage'])->name('addTrainPage');
@@ -51,6 +52,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('addTrip', [\App\Http\Controllers\TripController::class, 'addTripPage'])->name('addTripPage');
     Route::post('addTrip', [\App\Http\Controllers\TripController::class, 'addTrip'])->name('addTrip');
 
+=======
+>>>>>>> 505452f9056f70a9f4f1486242ad270a430a8a7d
     Route::post('addUserValidate', [\App\Http\Controllers\UserController::class, 'addUser'])->name('addUserValidate');
     Route::post('addBrandValidate', [\App\Http\Controllers\BrandController::class, 'addBrand'])->name('addBrandValidate');
 });
