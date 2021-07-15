@@ -64,4 +64,21 @@ class UserController extends Controller
         }
 
     }
+    public  function  showAllUserPage(){
+        $users = User::all();
+        return view("admin.showUser",['users'=>$users]);
+    }
+    public function  addUserToken($id){
+        $user = User::find($id);
+        $token = $user->createToken(microtime());
+        return $token;
+    }
+    public function deleteUserToken($id){
+        return "deleted";
+    }
+    public function exitUser(){
+        Auth::logout();
+        return Redirect::back()->with(["succsess" => "logout ok"]);
+
+    }
 }

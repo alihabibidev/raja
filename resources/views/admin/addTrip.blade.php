@@ -15,6 +15,7 @@
             <input type="text" name="destination" placeholder="مقصد قطار">
             <input type="text" name="price" placeholder=" قیمت ">
             <input type="text" name="off_price" placeholder=" قیمت شگفت انگیز ">
+            <input type="number" name="capacity" placeholder="  ظرفیت سفر ">
             <input type="date" name="time" placeholder=" زمان حرکت ">
 
             <select name="star">

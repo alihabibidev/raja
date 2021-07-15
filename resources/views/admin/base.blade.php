@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="/admin/plugins/morris/morris.css">
 
     <!-- App css -->
-    <link href="/admin/css/bootstrap-rtl.min.css" rel="stylesheet" type="text/css" />
-    <link href="/admin/css/core.css" rel="stylesheet" type="text/css" />
-    <link href="/admin/css/components.css" rel="stylesheet" type="text/css" />
-    <link href="/admin/css/icons.css" rel="stylesheet" type="text/css" />
-    <link href="/admin/css/pages.css" rel="stylesheet" type="text/css" />
-    <link href="/admin/css/menu.css" rel="stylesheet" type="text/css" />
-    <link href="/admin/css/responsive.css" rel="stylesheet" type="text/css" />
+    <link href="/admin/css/bootstrap-rtl.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/admin/css/core.css" rel="stylesheet" type="text/css"/>
+    <link href="/admin/css/components.css" rel="stylesheet" type="text/css"/>
+    <link href="/admin/css/icons.css" rel="stylesheet" type="text/css"/>
+    <link href="/admin/css/pages.css" rel="stylesheet" type="text/css"/>
+    <link href="/admin/css/menu.css" rel="stylesheet" type="text/css"/>
+    <link href="/admin/css/responsive.css" rel="stylesheet" type="text/css"/>
 
     <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -104,13 +104,14 @@
             <!-- User -->
             <div class="user-box">
                 <div class="user-img">
-                    <img src="/admin/images/users/avatar-1.jpg" alt="user-img" title="Mat Helme" class="img-circle img-thumbnail img-responsive">
+                    <img src="/admin/images/users/avatar-1.jpg" alt="user-img" title="Mat Helme"
+                         class="img-circle img-thumbnail img-responsive">
                     <div class="user-status offline"><i class="zmdi zmdi-dot-circle"></i></div>
                 </div>
-                <h5><a href="#">علی یدالهی</a> </h5>
+                <h5><a href="#">علی یدالهی</a></h5>
                 <ul class="list-inline">
                     <li>
-                        <a href="#" >
+                        <a href="#">
                             <i class="zmdi zmdi-settings"></i>
                         </a>
                     </li>
@@ -130,44 +131,55 @@
                     <li class="text-muted menu-title">دسته بندی ها</li>
 
                     <li>
-                        <a href="index.html" class="waves-effect active"><i class="zmdi zmdi-view-dashboard"></i> <span> داشبورد </span> </a>
+                        <a href="index.html" class="waves-effect active"><i class="zmdi zmdi-view-dashboard"></i> <span> داشبورد </span>
+                        </a>
                     </li>
 
                     <li>
-                        <a href="typography.html" class="waves-effect"><i class="zmdi zmdi-format-underlined"></i> <span> نوشته ها </span> </a>
+                        <a href="typography.html" class="waves-effect"><i class="zmdi zmdi-format-underlined"></i>
+                            <span> نوشته ها </span> </a>
                     </li>
 
 
                     <li class="has_sub">
-                        <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-view-list"></i> <span> برندها </span> <span class="menu-arrow"></span></a>
+                        <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-view-list"></i> <span> برندها </span>
+                            <span class="menu-arrow"></span></a>
                         <ul class="list-unstyled">
-                            <li><a href="tables-basic.html">مشاهده برند ها</a></li>
-                            <li><a href="{{route('addBrand')}}">  اضافه کردن برند</a></li>
+                            <li><a href="{{route('showBrand')}}">مشاهده برند ها</a></li>
+                            <li><a href="{{route('addBrand')}}"> اضافه کردن برند</a></li>
                         </ul>
                     </li>
 
 
                     <li class="has_sub">
-                        <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-view-list"></i> <span> قطارها </span> <span class="menu-arrow"></span></a>
+                        <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-view-list"></i> <span> قطارها </span>
+                            <span class="menu-arrow"></span></a>
                         <ul class="list-unstyled">
-                            <li><a href="tables-basic.html">مشاهده قطار ها</a></li>
-                            <li><a href="{{route('addTrainPage')}}">  اضافه کردن قطار</a></li>
+                            <li><a href="{{route('showTrain')}}">مشاهده قطار ها</a></li>
+                            <li><a href="{{route('addTrainPage')}}"> اضافه کردن قطار</a></li>
                         </ul>
                     </li>
                     <li class="has_sub">
-                        <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-view-list"></i> <span> سفرها </span> <span class="menu-arrow"></span></a>
+                        <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-view-list"></i> <span> سفرها </span>
+                            <span class="menu-arrow"></span></a>
                         <ul class="list-unstyled">
-                            <li><a href="tables-basic.html">مشاهده سفر ها</a></li>
-                            <li><a href="{{route('addTripPage')}}">  اضافه کردن سفر</a></li>
+                            <li><a href="{{route('showtrip')}}">مشاهده سفر ها</a></li>
+                            <li><a href="{{route('addTripPage')}}"> اضافه کردن سفر</a></li>
+                        </ul>
+                    </li>
+                    <li class="has_sub">
+                        <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-view-list"></i> <span> کاربران </span>
+                            <span class="menu-arrow"></span></a>
+                        <ul class="list-unstyled">
+                            <li><a href="{{route('showUser')}}">مشاهده کاربرها </a></li>
+                            <li><a href="{{route('addUser')}}"> اضافه کردن کاربر</a></li>
                         </ul>
                     </li>
 
-
-
-
-
-
-
+                    <li>
+                        <a href="{{route('exit')}}" class="waves-effect"><i class="zmdi zmdi-format-underlined"></i>
+                            <span>  خروج </span> </a>
+                    </li>
                 </ul>
                 <div class="clearfix"></div>
             </div>
@@ -180,7 +192,6 @@
     <!-- Left Sidebar End -->
 
 
-
     <!-- ============================================================== -->
     <!-- Start right Content here -->
     <!-- ============================================================== -->
@@ -188,7 +199,26 @@
         <!-- Start content -->
         <div class="content">
             <div class="container">
-            @yield('content')
+                @if(session()->has('success'))
+                    <div class="alert alert-success alert-dismissible">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        {{ session()->get('success') }}
+                    </div>
+                @endif
+                @if(session()->has('error'))
+                    <div class="alert alert-danger alert-dismissible">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        {{ session()->get('error') }}
+                    </div>
+                @endif
+
+                @if(session()->has('warning'))
+                    <div class="alert alert-warning alert-dismissible">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        {{ session()->get('warning') }}
+                    </div>
+                @endif
+                @yield('content')
             </div> <!-- container -->
 
         </div> <!-- content -->
@@ -283,7 +313,6 @@
 <!-- END wrapper -->
 
 
-
 <script>
     var resizefunc = [];
 </script>
@@ -315,6 +344,6 @@
 <!-- App js -->
 <script src="/admin/js/jquery.core.js"></script>
 <script src="/admin/js/jquery.app.js"></script>
-
+@yield("extra_js")
 </body>
 </html>

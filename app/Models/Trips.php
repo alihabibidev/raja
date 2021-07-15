@@ -17,6 +17,7 @@ class Trips extends Model
         'off_price',
         'time',
         'destination',
+        'capacity'
 
     ];
 
